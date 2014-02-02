@@ -22,9 +22,8 @@ $('p.library-url').on('mouseenter', function (event) {
 
   $('.search').focus();
   $('.search').on('keyup', function (ev) {
-    var val = $(ev.currentTarget).val();
+    var val = $(ev.currentTarget).val().toLowerCase();
 
-    console.log(val);
     if(val.length > 0 ){
       $('[data-library-name]').hide();
       $('[data-library-name*="'+val+'"]').show();
